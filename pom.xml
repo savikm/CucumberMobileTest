@@ -146,8 +146,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
-                
-          <!--       <configuration>
+                  <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
+        <!--          <executions>
+                    <execution>
+                <configuration>
                     <includes>
                         <include>**/SerenityBDDRunner.java</include>
                     </includes>
@@ -155,16 +159,14 @@
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
                     <excludes>
-                        <exclude>**/*WithFailures.java</exclude>
+                        <exclude>all</exclude>
                     </excludes>
+                    <skipTests>true</skipTests>
                     <parallel>methods</parallel>
                     <threadCount>${parallel.tests}</threadCount>
                     <useUnlimitedThreads>false</useUnlimitedThreads>
-                </configuration> -->
-              <!--   <executions>
-                    <execution>
-                        <goals>
-                        </goals>
+                </configuration>
+                        <goals><goal>test</goal></goals>
                     </execution>
                 </executions> -->
             </plugin>
@@ -192,14 +194,14 @@
                             <goal>integration-test</goal>
                         </goals>
                         <configuration>
-                         <!--    <rerunFailingTestsCount>1</rerunFailingTestsCount>
-                            <testFailureIgnore>true</testFailureIgnore> -->
+                            <rerunFailingTestsCount>1</rerunFailingTestsCount>
+                            <testFailureIgnore>true</testFailureIgnore>
                             <includes>
                                 <include>**/ANZTest.java</include>
                                 <!-- <include>**/*IT.class</include> -->
                             </includes>
                             <perCoreThreadCount>true</perCoreThreadCount>
-                            <!-- <reportsDirectory>target</reportsDirectory> -->
+                            <reportsDirectory>target</reportsDirectory>
                         </configuration>
                     </execution>
                 </executions>

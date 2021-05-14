@@ -15,6 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 				"timeline: test-output-thread/",
 				"json:target/Reports/TestResult.json",
 				"junit:target/Reports/TestResult.xml",
+				"rerun:target/failedrerun.txt"
 				},
 		
 		
