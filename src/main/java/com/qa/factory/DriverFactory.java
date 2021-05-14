@@ -47,10 +47,10 @@ public class DriverFactory {
 	
 	public WebDriver init_driver() {
 		
-		switch (environmentType) {	    
-        case LOCAL : driver = createLocalDriver();
+		switch (environmentType.name()) {	    
+        case "LOCAL" : driver = createLocalDriver();
         	break;
-        case REMOTE : driver = createRemoteDriver();
+        case "REMOTE" : driver = createRemoteDriver();
         	break;
 	   }
 	   return driver;
