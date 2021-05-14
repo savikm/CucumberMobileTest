@@ -61,10 +61,10 @@ public class BorrwoingCalcPage {
 		//driver.findElement(rdpBorTypeHome).click();
 		
 		driver.findElement(edtIncBeforeTax).sendKeys(datacat.get("IncBeforeTaxset"));
-		//ExtentCucumberAdapter.addTestStepLog("Data entered within edtIncBeforeTax as :"+datacat.get("IncBeforeTaxset") );
+		ExtentCucumberAdapter.addTestStepLog("Data entered within edtIncBeforeTax as :"+datacat.get("IncBeforeTaxset") );
 		
 		driver.findElement(edtOtherIncome).sendKeys(datacat.get("OtherIncSet"));
-		//ExtentCucumberAdapter.addTestStepLog("Data entered within edtOtherIncome as :"+datacat.get("OtherIncSet") );
+		ExtentCucumberAdapter.addTestStepLog("Data entered within edtOtherIncome as :"+datacat.get("OtherIncSet") );
 		driver.findElement(edtLivingExpenses).sendKeys(datacat.get("LivExpenseSet"));
 		driver.findElement(edtCurHomeRepaymnt).sendKeys(datacat.get("CurHomeLoanRepaySet"));
 		
