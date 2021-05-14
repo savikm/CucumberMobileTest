@@ -12,9 +12,10 @@ import io.cucumber.junit.CucumberOptions;
 		tags="@Smoke",
 		plugin = {"pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"timeline: test-output-thread/",
 				"json:target/Reports/TestResult.json",
 				"junit:target/Reports/TestResult.xml",
-				"rerun:target/failedrerun.txt"},
+				},
 		
 		
 		dryRun=false,

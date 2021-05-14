@@ -1,4 +1,4 @@
-package CucumberTest;
+package CucumberTest.BDD.CucumberTest;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
